@@ -6,7 +6,7 @@ import onEmployeesListPage from '../src/pages-verifications/EmployeesListPageVer
 describe('Positive Login process', () => {
     it('Verify that User can successfully login to Café Townsend with valid Username and Password', () => {
         open(loginPage);
-        at(loginPage).setCredentialsClickLogin(validCredentials.username, validCredentials.password);
+        at(loginPage).setCredentialsAndClickLogin(validCredentials.username, validCredentials.password);
         assertThat(onEmployeesListPage)
             .mainElementsLoaded()
             .correctUserGreeting(validCredentials.username)

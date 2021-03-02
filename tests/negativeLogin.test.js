@@ -7,7 +7,7 @@ describe('Negative Login process', () => {
     invalidCredentials.forEach(negativeCase => {
         it(`Verify that User cannot login to Café Townsend with ${negativeCase.description}`, () => {
             open(loginPage);
-            at(loginPage).setCredentialsClickLogin(negativeCase.username, negativeCase.password);
+            at(loginPage).setCredentialsAndClickLogin(negativeCase.username, negativeCase.password);
             assertThat(onLoginPage).errorMessageShown(negativeCase.field, negativeCase.error);
             at(loginPage).clearFields();
         });

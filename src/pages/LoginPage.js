@@ -26,7 +26,7 @@ export default class LoginPage extends BasePage {
         return this;
     }
 
-    setCredentialsClickLogin(username, password) {
+    setCredentialsAndClickLogin(username, password) {
         this.enterUsername(username)
             .enterPassword(password)
             .clickLoginButton();

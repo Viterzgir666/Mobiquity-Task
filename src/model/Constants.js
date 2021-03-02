@@ -12,11 +12,3 @@ export const validCredentials = {
     username: 'Luke',
     password: 'Skywalker'
 };
-export function login() {
-    open(loginPage);
-    at(loginPage).setCredentialsClickLogin(validCredentials.username, validCredentials.password);
-    assertThat(onEmployeesListPage)
-        .mainElementsLoaded()
-        .correctUserGreeting(validCredentials.username)
-        .correctRedirection();
-}
